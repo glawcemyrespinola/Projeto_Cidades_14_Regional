@@ -46,7 +46,7 @@
       (= (:nome (first cidades)) nome-alvo) pos
       :else (recur (rest cidades) (inc pos)))))
 
-(defn -main []
+(defn -main [& args]
   (println (calcular-densidade-populacional municipios-14-regional))
   (println)
   (println (ordenar-por-maior-area municipios-14-regional))
@@ -60,3 +60,4 @@
   (println (str "Baia da Traição é o "
                 (posicao-municipio "Baía da Traição" (ordenar-por-maior-area municipios-14-regional))
                 "º maior município em termos de área territorial.")))
+(-main)
